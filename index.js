@@ -318,7 +318,7 @@ stk500.prototype.verifyPage = function (
 ) {
   this.log("verify page");
   var self = this;
-  match = Buffer.concat([
+  const match = Buffer.concat([
     Buffer.from([Statics.Resp_STK_INSYNC]),
     writeBytes,
     Buffer.from([Statics.Resp_STK_OK]),
